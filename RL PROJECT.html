@@ -7516,7 +7516,12 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="RL-PROJECT---DICE-GAME"><strong>RL PROJECT</strong> - <strong>DICE GAME</strong><a class="anchor-link" href="#RL-PROJECT---DICE-GAME">¶</a></h1>
+<style>
+  h1 {
+    font-size: 60px;
+  }
+</style>
+<h1>RL PROJECT - DICE GAME</h1>
 </div>
 </div>
 </div>
@@ -7529,6 +7534,66 @@ a.anchor-link {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p>by Liam Phan</p>
 <p><em>Student Number: 19-320-563</em></p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><strong>Table of contents</strong><a id="toc0_"></a></p>
+<ul>
+<li><ol>
+<li><a href="#toc1_">The Game</a></li>
+</ol>
+<ul>
+<li>1.1. <a href="#toc1_1_">FlowChart</a></li>
+<li>1.2. <a href="#toc1_2_">The Dices</a></li>
+</ul>
+</li>
+<li><ol start="2">
+<li><a href="#toc2_">The Task</a></li>
+</ol>
+<ul>
+<li>2.1. <a href="#toc2_1_">Considering the game as a Markov decision process, identify the state space S, the action space A, and the reward set R.</a></li>
+<li>2.2. <a href="#toc2_2_">Implement a Python class that represents the game as a reinforcement learning task. The class should contain all the information about the game state, and should provide a “step” method that takes an action as input and returns the reward and next state, as well as a “reset” method that resets the game to its initial state</a></li>
+<li>2.3. <a href="#toc2_3_">Using dynamic programming, compute the value functions under the following policies. Explain the results and represent them graphically.</a></li>
+<li>2.4. <a href="#toc2_4_">Find the optimal policy using dynamic programming. Represent the action-value function under the optimal policy graphically. Explain the results and compare them to those of the previous task.</a></li>
+</ul>
+</li>
+<li><ol start="3">
+<li><a href="#toc3_">The Bonus</a></li>
+</ol>
+<ul>
+<li>3.1. <a href="#toc3_1_">“R1”: The player always rolls a single dice</a></li>
+<li>3.2. <a href="#toc3_2_">“R2”: The player always rolls both dice.</a></li>
+<li>3.3. <a href="#toc3_3_">“RR”: If the player’s score is strictly smaller than 20, they roll either one or two dice with equal probability. Otherwise, they choose one of the three bet-multiplicators uniformly at random</a></li>
+<li>3.4. <a href="#toc3_4_">"Optimal": Play R2 until 21, then R1 from 22 until 25 and Bet on the Dealer outcomes with Multiplicator of 1 from 26 to 27, Bet on the Dealer with Multiplicator of 3 from 28 until the end of the round.</a></li>
+</ul>
+</li>
+</ul>
+<!-- vscode-jupyter-toc-config
+	numbering=true
+	anchor=true
+	flat=false
+	minLevel=1
+	maxLevel=2
+	/vscode-jupyter-toc-config -->
+<!-- THIS CELL WILL BE REPLACED ON TOC UPDATE. DO NOT WRITE YOUR TEXT IN THIS CELL -->
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p style="page-break-after:always;"></p>
 </div>
 </div>
 </div>
@@ -7557,7 +7622,18 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="The-Game">The Game<a class="anchor-link" href="#The-Game">¶</a></h2>
+<p style="page-break-after:always;"></p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="1.-The-Game">1. <a id="toc1_"></a><a href="#toc0_">The Game</a><a class="anchor-link" href="#1.-The-Game">¶</a></h1>
 </div>
 </div>
 </div>
@@ -7605,7 +7681,7 @@ number has twice the probability of each of the smaller numbers.</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="FlowChart">FlowChart<a class="anchor-link" href="#FlowChart">¶</a></h3>
+<h2 id="1.1.-FlowChart">1.1. <a id="toc1_1_"></a><a href="#toc0_">FlowChart</a><a class="anchor-link" href="#1.1.-FlowChart">¶</a></h2>
 </div>
 </div>
 </div>
@@ -7640,7 +7716,18 @@ number has twice the probability of each of the smaller numbers.</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="The-Dices">The Dices<a class="anchor-link" href="#The-Dices">¶</a></h3>
+<p style="page-break-after:always;"></p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="1.2.-The-Dices">1.2. <a id="toc1_2_"></a><a href="#toc0_">The Dices</a><a class="anchor-link" href="#1.2.-The-Dices">¶</a></h2>
 </div>
 </div>
 </div>
@@ -7759,7 +7846,7 @@ P(D = 30) = 2/7</code></pre>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="The-Task">The Task<a class="anchor-link" href="#The-Task">¶</a></h2>
+<h1 id="2.-The-Task">2. <a id="toc2_"></a><a href="#toc0_">The Task</a><a class="anchor-link" href="#2.-The-Task">¶</a></h1>
 </div>
 </div>
 </div>
@@ -7781,7 +7868,7 @@ P(D = 30) = 2/7</code></pre>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Considering-the-game-as-a-Markov-decision-process,-identify-the-state-space-S,-the-action-space-A,-and-the-reward-set-R.">Considering the game as a Markov decision process, identify the state space S, the action space A, and the reward set R.<a class="anchor-link" href="#Considering-the-game-as-a-Markov-decision-process,-identify-the-state-space-S,-the-action-space-A,-and-the-reward-set-R.">¶</a></h3>
+<h2 id="2.1.-Considering-the-game-as-a-Markov-decision-process,-identify-the-state-space-S,-the-action-space-A,-and-the-reward-set-R.">2.1. <a id="toc2_1_"></a><a href="#toc0_">Considering the game as a Markov decision process, identify the state space S, the action space A, and the reward set R.</a><a class="anchor-link" href="#2.1.-Considering-the-game-as-a-Markov-decision-process,-identify-the-state-space-S,-the-action-space-A,-and-the-reward-set-R.">¶</a></h2>
 </div>
 </div>
 </div>
@@ -7794,10 +7881,9 @@ P(D = 30) = 2/7</code></pre>
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <hr/>
 <ul>
-<li>State Space (S) is defined by the Player Score after a <strong>TURN</strong>, and thus can range from 0 to 31</li>
-</ul>
-<p>$$S = \{0, 1, ..., 31\} $$</p>
-<ul>
+<li><p>State Space (S) is defined by the Player Score after a <strong>TURN</strong>, and thus can range from 0 to 31</p>
+<p>$S = \{0, 1, ..., 31\} $</p>
+</li>
 <li><p>The Action Space (A) is defined by the set of possible Actions the player can choose at each <strong>TURN</strong>, and thus can be the following:</p>
 <pre><code>  1. Roll one dice or 
   2. two dices simulteanously
@@ -7835,7 +7921,7 @@ P(D = 30) = 2/7</code></pre>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Implement-a-Python-class-that-represents-the-game-as-a-reinforcement-learning-task.-The-class-should-contain-all-the-information-about-the-game-state,-and-should-provide-a-%E2%80%9Cstep%E2%80%9D-method-that-takes-an-action-as-input-and-returns-the-reward-and-next-state,-as-well-as-a-%E2%80%9Creset%E2%80%9D-method-that-resets-the-game-to-its-initial-state">Implement a Python class that represents the game as a reinforcement learning task. The class should contain all the information about the game state, and should provide a “step” method that takes an action as input and returns the reward and next state, as well as a “reset” method that resets the game to its initial state<a class="anchor-link" href="#Implement-a-Python-class-that-represents-the-game-as-a-reinforcement-learning-task.-The-class-should-contain-all-the-information-about-the-game-state,-and-should-provide-a-%E2%80%9Cstep%E2%80%9D-method-that-takes-an-action-as-input-and-returns-the-reward-and-next-state,-as-well-as-a-%E2%80%9Creset%E2%80%9D-method-that-resets-the-game-to-its-initial-state">¶</a></h3>
+<h2 id="2.2.-Implement-a-Python-class-that-represents-the-game-as-a-reinforcement-learning-task.-The-class-should-contain-all-the-information-about-the-game-state,-and-should-provide-a-%E2%80%9Cstep%E2%80%9D-method-that-takes-an-action-as-input-and-returns-the-reward-and-next-state,-as-well-as-a-%E2%80%9Creset%E2%80%9D-method-that-resets-the-game-to-its-initial-state">2.2. <a id="toc2_2_"></a><a href="#toc0_">Implement a Python class that represents the game as a reinforcement learning task. The class should contain all the information about the game state, and should provide a “step” method that takes an action as input and returns the reward and next state, as well as a “reset” method that resets the game to its initial state</a><a class="anchor-link" href="#2.2.-Implement-a-Python-class-that-represents-the-game-as-a-reinforcement-learning-task.-The-class-should-contain-all-the-information-about-the-game-state,-and-should-provide-a-%E2%80%9Cstep%E2%80%9D-method-that-takes-an-action-as-input-and-returns-the-reward-and-next-state,-as-well-as-a-%E2%80%9Creset%E2%80%9D-method-that-resets-the-game-to-its-initial-state">¶</a></h2>
 </div>
 </div>
 </div>
@@ -7846,7 +7932,7 @@ P(D = 30) = 2/7</code></pre>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h4 id="Dice-Game-Class">Dice Game Class<a class="anchor-link" href="#Dice-Game-Class">¶</a></h4>
+<h3 id="Dice-Game-Class">Dice Game Class<a class="anchor-link" href="#Dice-Game-Class">¶</a></h3>
 </div>
 </div>
 </div>
@@ -8064,7 +8150,7 @@ Dice Game Reset ! Score: 0
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h4 id="Simplified-Version">Simplified Version<a class="anchor-link" href="#Simplified-Version">¶</a></h4>
+<h3 id="Simplified-Version">Simplified Version<a class="anchor-link" href="#Simplified-Version">¶</a></h3>
 </div>
 </div>
 </div>
@@ -8178,7 +8264,7 @@ Dice Game Reset ! Score: 0
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h4 id="Quickly-Testing-some-Policy">Quickly Testing some Policy<a class="anchor-link" href="#Quickly-Testing-some-Policy">¶</a></h4>
+<h3 id="Quickly-Testing-some-Policy">Quickly Testing some Policy<a class="anchor-link" href="#Quickly-Testing-some-Policy">¶</a></h3>
 </div>
 </div>
 </div>
@@ -8382,7 +8468,7 @@ probability. Otherwise, they choose one of the three bet-multiplicators uniforml
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Using-dynamic-programming,-compute-the-value-functions-under-the-following-policies.-Explain-the-results-and-represent-them-graphically.">Using dynamic programming, compute the value functions under the following policies. Explain the results and represent them graphically.<a class="anchor-link" href="#Using-dynamic-programming,-compute-the-value-functions-under-the-following-policies.-Explain-the-results-and-represent-them-graphically.">¶</a></h3>
+<h2 id="2.3.-Using-dynamic-programming,-compute-the-value-functions-under-the-following-policies.-Explain-the-results-and-represent-them-graphically.">2.3. <a id="toc2_3_"></a><a href="#toc0_">Using dynamic programming, compute the value functions under the following policies. Explain the results and represent them graphically.</a><a class="anchor-link" href="#2.3.-Using-dynamic-programming,-compute-the-value-functions-under-the-following-policies.-Explain-the-results-and-represent-them-graphically.">¶</a></h2>
 </div>
 </div>
 </div>
@@ -8446,7 +8532,7 @@ probability. Otherwise, they choose one of the three bet-multiplicators uniforml
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h4 id="%E2%80%9CR1%E2%80%9D:-The-player-always-rolls-a-single-dice">“R1”: The player always rolls a single dice<a class="anchor-link" href="#%E2%80%9CR1%E2%80%9D:-The-player-always-rolls-a-single-dice">¶</a></h4>
+<h3 id="%E2%80%9CR1%E2%80%9D:-The-player-always-rolls-a-single-dice">“R1”: The player always rolls a single dice<a class="anchor-link" href="#%E2%80%9CR1%E2%80%9D:-The-player-always-rolls-a-single-dice">¶</a></h3>
 </div>
 </div>
 </div>
@@ -9799,7 +9885,7 @@ probability. Otherwise, they choose one of the three bet-multiplicators uniforml
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h4 id="%E2%80%9CR2%E2%80%9D:-The-player-always-rolls-both-dice.">“R2”: The player always rolls both dice.<a class="anchor-link" href="#%E2%80%9CR2%E2%80%9D:-The-player-always-rolls-both-dice.">¶</a></h4>
+<h3 id="%E2%80%9CR2%E2%80%9D:-The-player-always-rolls-both-dice.">“R2”: The player always rolls both dice.<a class="anchor-link" href="#%E2%80%9CR2%E2%80%9D:-The-player-always-rolls-both-dice.">¶</a></h3>
 </div>
 </div>
 </div>
@@ -11979,7 +12065,7 @@ probability. Otherwise, they choose one of the three bet-multiplicators uniforml
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h4 id="%E2%80%9CRR%E2%80%9D:-If-the-player%E2%80%99s-score-is-strictly-smaller-than-20,-they-roll-either-one-or-two-dice-with-equal-probability.-Otherwise,-they-choose-one-of-the-three-bet-multiplicators-uniformly-at-random">“RR”: If the player’s score is strictly smaller than 20, they roll either one or two dice with equal probability. Otherwise, they choose one of the three bet-multiplicators uniformly at random<a class="anchor-link" href="#%E2%80%9CRR%E2%80%9D:-If-the-player%E2%80%99s-score-is-strictly-smaller-than-20,-they-roll-either-one-or-two-dice-with-equal-probability.-Otherwise,-they-choose-one-of-the-three-bet-multiplicators-uniformly-at-random">¶</a></h4>
+<h3 id="%E2%80%9CRR%E2%80%9D:-If-the-player%E2%80%99s-score-is-strictly-smaller-than-20,-they-roll-either-one-or-two-dice-with-equal-probability.-Otherwise,-they-choose-one-of-the-three-bet-multiplicators-uniformly-at-random">“RR”: If the player’s score is strictly smaller than 20, they roll either one or two dice with equal probability. Otherwise, they choose one of the three bet-multiplicators uniformly at random<a class="anchor-link" href="#%E2%80%9CRR%E2%80%9D:-If-the-player%E2%80%99s-score-is-strictly-smaller-than-20,-they-roll-either-one-or-two-dice-with-equal-probability.-Otherwise,-they-choose-one-of-the-three-bet-multiplicators-uniformly-at-random">¶</a></h3>
 </div>
 </div>
 </div>
@@ -13022,7 +13108,7 @@ probability. Otherwise, they choose one of the three bet-multiplicators uniforml
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h4 id="All-Policies-Comparison">All Policies Comparison<a class="anchor-link" href="#All-Policies-Comparison">¶</a></h4>
+<h3 id="All-Policies-Comparison">All Policies Comparison<a class="anchor-link" href="#All-Policies-Comparison">¶</a></h3>
 </div>
 </div>
 </div>
@@ -13107,7 +13193,7 @@ probability. Otherwise, they choose one of the three bet-multiplicators uniforml
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Find-the-optimal-policy-using-dynamic-programming.-Represent-the-action-value-function-under-the-optimal-policy-graphically.-Explain-the-results-and-compare-them-to-those-of-the-previous-task.">Find the optimal policy using dynamic programming. Represent the action-value function under the optimal policy graphically. Explain the results and compare them to those of the previous task.<a class="anchor-link" href="#Find-the-optimal-policy-using-dynamic-programming.-Represent-the-action-value-function-under-the-optimal-policy-graphically.-Explain-the-results-and-compare-them-to-those-of-the-previous-task.">¶</a></h3>
+<h2 id="2.4.-Find-the-optimal-policy-using-dynamic-programming.-Represent-the-action-value-function-under-the-optimal-policy-graphically.-Explain-the-results-and-compare-them-to-those-of-the-previous-task.">2.4. <a id="toc2_4_"></a><a href="#toc0_">Find the optimal policy using dynamic programming. Represent the action-value function under the optimal policy graphically. Explain the results and compare them to those of the previous task.</a><a class="anchor-link" href="#2.4.-Find-the-optimal-policy-using-dynamic-programming.-Represent-the-action-value-function-under-the-optimal-policy-graphically.-Explain-the-results-and-compare-them-to-those-of-the-previous-task.">¶</a></h2>
 </div>
 </div>
 </div>
@@ -13118,7 +13204,7 @@ probability. Otherwise, they choose one of the three bet-multiplicators uniforml
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h4 id="Policy-Evaluation-Function">Policy Evaluation Function<a class="anchor-link" href="#Policy-Evaluation-Function">¶</a></h4>
+<h3 id="Policy-Evaluation-Function">Policy Evaluation Function<a class="anchor-link" href="#Policy-Evaluation-Function">¶</a></h3>
 </div>
 </div>
 </div>
@@ -13165,7 +13251,7 @@ probability. Otherwise, they choose one of the three bet-multiplicators uniforml
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h4 id="Policy-Improvement-Function">Policy Improvement Function<a class="anchor-link" href="#Policy-Improvement-Function">¶</a></h4>
+<h3 id="Policy-Improvement-Function">Policy Improvement Function<a class="anchor-link" href="#Policy-Improvement-Function">¶</a></h3>
 </div>
 </div>
 </div>
@@ -13230,7 +13316,7 @@ probability. Otherwise, they choose one of the three bet-multiplicators uniforml
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h4 id="Policy-Implementation-For-Optimality">Policy Implementation For Optimality<a class="anchor-link" href="#Policy-Implementation-For-Optimality">¶</a></h4>
+<h3 id="Policy-Implementation-For-Optimality">Policy Implementation For Optimality<a class="anchor-link" href="#Policy-Implementation-For-Optimality">¶</a></h3>
 </div>
 </div>
 </div>
@@ -13534,7 +13620,7 @@ probability. Otherwise, they choose one of the three bet-multiplicators uniforml
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="The-Bonus">The Bonus<a class="anchor-link" href="#The-Bonus">¶</a></h2>
+<h1 id="3.-The-Bonus">3. <a id="toc3_"></a><a href="#toc0_">The Bonus</a><a class="anchor-link" href="#3.-The-Bonus">¶</a></h1>
 </div>
 </div>
 </div>
@@ -13574,7 +13660,7 @@ the value of the initial state under each of the policies from the previous task
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="%E2%80%9CR1%E2%80%9D:-The-player-always-rolls-a-single-dice">“R1”: The player always rolls a single dice<a class="anchor-link" href="#%E2%80%9CR1%E2%80%9D:-The-player-always-rolls-a-single-dice">¶</a></h3>
+<h2 id="3.1.-%E2%80%9CR1%E2%80%9D:-The-player-always-rolls-a-single-dice">3.1. <a id="toc3_1_"></a><a href="#toc0_">“R1”: The player always rolls a single dice</a><a class="anchor-link" href="#3.1.-%E2%80%9CR1%E2%80%9D:-The-player-always-rolls-a-single-dice">¶</a></h2>
 </div>
 </div>
 </div>
@@ -13697,7 +13783,7 @@ the value of the initial state under each of the policies from the previous task
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="%E2%80%9CR2%E2%80%9D:-The-player-always-rolls-both-dice.">“R2”: The player always rolls both dice.<a class="anchor-link" href="#%E2%80%9CR2%E2%80%9D:-The-player-always-rolls-both-dice.">¶</a></h3>
+<h2 id="3.2.-%E2%80%9CR2%E2%80%9D:-The-player-always-rolls-both-dice.">3.2. <a id="toc3_2_"></a><a href="#toc0_">“R2”: The player always rolls both dice.</a><a class="anchor-link" href="#3.2.-%E2%80%9CR2%E2%80%9D:-The-player-always-rolls-both-dice.">¶</a></h2>
 </div>
 </div>
 </div>
@@ -13820,7 +13906,7 @@ the value of the initial state under each of the policies from the previous task
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="%E2%80%9CRR%E2%80%9D:-If-the-player%E2%80%99s-score-is-strictly-smaller-than-20,-they-roll-either-one-or-two-dice-with-equal-probability.-Otherwise,-they-choose-one-of-the-three-bet-multiplicators-uniformly-at-random">“RR”: If the player’s score is strictly smaller than 20, they roll either one or two dice with equal probability. Otherwise, they choose one of the three bet-multiplicators uniformly at random<a class="anchor-link" href="#%E2%80%9CRR%E2%80%9D:-If-the-player%E2%80%99s-score-is-strictly-smaller-than-20,-they-roll-either-one-or-two-dice-with-equal-probability.-Otherwise,-they-choose-one-of-the-three-bet-multiplicators-uniformly-at-random">¶</a></h3>
+<h2 id="3.3.-%E2%80%9CRR%E2%80%9D:-If-the-player%E2%80%99s-score-is-strictly-smaller-than-20,-they-roll-either-one-or-two-dice-with-equal-probability.-Otherwise,-they-choose-one-of-the-three-bet-multiplicators-uniformly-at-random">3.3. <a id="toc3_3_"></a><a href="#toc0_">“RR”: If the player’s score is strictly smaller than 20, they roll either one or two dice with equal probability. Otherwise, they choose one of the three bet-multiplicators uniformly at random</a><a class="anchor-link" href="#3.3.-%E2%80%9CRR%E2%80%9D:-If-the-player%E2%80%99s-score-is-strictly-smaller-than-20,-they-roll-either-one-or-two-dice-with-equal-probability.-Otherwise,-they-choose-one-of-the-three-bet-multiplicators-uniformly-at-random">¶</a></h2>
 </div>
 </div>
 </div>
@@ -13950,7 +14036,7 @@ the value of the initial state under each of the policies from the previous task
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="%22Optimal%22:-Play-R2-until-21,-then-R1-from-22-until-25-and-Bet-on-the-Dealer-outcomes-with-Multiplicator-of-1-from-26-to-27,-Bet-on-the-Dealer-with-Multiplicator-of-3-from-28-until-the-end-of-the-round.">"Optimal": Play R2 until 21, then R1 from 22 until 25 and Bet on the Dealer outcomes with Multiplicator of 1 from 26 to 27, Bet on the Dealer with Multiplicator of 3 from 28 until the end of the round.<a class="anchor-link" href="#%22Optimal%22:-Play-R2-until-21,-then-R1-from-22-until-25-and-Bet-on-the-Dealer-outcomes-with-Multiplicator-of-1-from-26-to-27,-Bet-on-the-Dealer-with-Multiplicator-of-3-from-28-until-the-end-of-the-round.">¶</a></h3>
+<h2 id="3.4.-%22Optimal%22:-Play-R2-until-21,-then-R1-from-22-until-25-and-Bet-on-the-Dealer-outcomes-with-Multiplicator-of-1-from-26-to-27,-Bet-on-the-Dealer-with-Multiplicator-of-3-from-28-until-the-end-of-the-round.">3.4. <a id="toc3_4_"></a><a href="#toc0_">"Optimal": Play R2 until 21, then R1 from 22 until 25 and Bet on the Dealer outcomes with Multiplicator of 1 from 26 to 27, Bet on the Dealer with Multiplicator of 3 from 28 until the end of the round.</a><a class="anchor-link" href="#3.4.-%22Optimal%22:-Play-R2-until-21,-then-R1-from-22-until-25-and-Bet-on-the-Dealer-outcomes-with-Multiplicator-of-1-from-26-to-27,-Bet-on-the-Dealer-with-Multiplicator-of-3-from-28-until-the-end-of-the-round.">¶</a></h2>
 </div>
 </div>
 </div>
